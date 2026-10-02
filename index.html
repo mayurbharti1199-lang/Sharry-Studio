@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sharry Studio | Women's Fashion</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     ANNOUNCEMENT BAR
+===================================================== -->
+
+<div class="announcement">
+  <div class="announcement-track">
+    ✨ FIRST ORDER 10% OFF — USE CODE SHARRY10
+    <span>•</span>
+    🚚 EASY DELIVERY
+    <span>•</span>
+    💕 NEW COLLECTION IS LIVE
+    <span>•</span>
+    ↩ EASY RETURNS
+    <span>•</span>
+    ✨ FIRST ORDER 10% OFF — USE CODE SHARRY10
+    <span>•</span>
+    🚚 EASY DELIVERY
+  </div>
+</div>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+  <a href="#home" class="brand">
+
+    <div class="brand-3d">
+      Sharry
+    </div>
+
+    <span>STUDIO</span>
+
+  </a>
+
+
+  <nav class="desktop-nav">
+
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#new">New Arrivals</a>
+    <a href="#trending">Trending</a>
+    <a href="#about">About</a>
+
+  </nav>
+
+
+  <div class="nav-actions">
+
+    <button onclick="openSearch()" class="nav-icon">
+      🔍
+    </button>
+
+    <button onclick="toggleWishlist()" class="nav-icon">
+      ♡
+      <small id="wishlistCount">0</small>
+    </button>
+
+    <button onclick="openCart()" class="nav-icon">
+      🛍
+      <small id="cartCount">0</small>
+    </button>
+
+    <button class="mobile-menu" onclick="toggleMobileMenu()">
+      ☰
+    </button>
+
+  </div>
+
+</header>
+
+
+<!-- MOBILE MENU -->
+
+<div id="mobileMenu" class="mobile-menu-panel">
+
+  <a href="#home">Home</a>
+  <a href="#shop">Shop</a>
+  <a href="#new">New Arrivals</a>
+  <a href="#trending">Trending</a>
+  <a href="#about">About</a>
+
+</div>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section id="home" class="hero">
+
+  <div class="hero-background-circle circle-one"></div>
+  <div class="hero-background-circle circle-two"></div>
+
+  <div class="hero-content">
+
+    <p class="eyebrow">
+      WOMEN'S FASHION • NEW COLLECTION
+    </p>
+
+    <h1>
+      Wear your mood.
+      <br>
+      <span>Own your story.</span>
+    </h1>
+
+    <p class="hero-description">
+
+      Discover effortless women's fashion designed
+      to make every ordinary day feel a little more special.
+
+    </p>
+
+
+    <div class="hero-buttons">
+
+      <a href="#shop" class="primary-btn">
+        Shop Collection →
+      </a>
+
+      <a href="#trending" class="secondary-btn">
+        Explore Trends
+      </a>
+
+    </div>
+
+
+    <div class="hero-stats">
+
+      <div>
+        <strong>500+</strong>
+        <span>Styles</span>
+      </div>
+
+      <div>
+        <strong>4.9★</strong>
+        <span>Customer Rating</span>
+      </div>
+
+      <div>
+        <strong>Easy</strong>
+        <span>Returns</span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="hero-visual">
+
+    <div class="floating-card card-one">
+      ✨ New Drop
+    </div>
+
+    <div class="floating-card card-two">
+      ♡ Loved by women
+    </div>
+
+    <div class="hero-image-wrapper">
+
+      <img
+        src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=85"
+        alt="Women's fashion"
+      >
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CATEGORY SECTION
+===================================================== -->
+
+<section class="section categories-section">
+
+  <div class="section-heading">
+
+    <p class="eyebrow">
+      FIND YOUR STYLE
+    </p>
+
+    <h2>
+      Shop by category
+    </h2>
+
+    <p>
+      Explore pieces made for every mood and moment.
+    </p>
+
+  </div>
+
+
+  <div class="category-grid">
+
+    <button onclick="filterProducts('all')" class="category-card">
+
+      <div class="category-image">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&q=80">
+      </div>
+
+      <h3>All Styles</h3>
+
+      <span>Explore Collection →</span>
+
+    </button>
+
+
+    <button onclick="filterProducts('tops')" class="category-card">
+
+      <div class="category-image">
+        <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=600&q=80">
+      </div>
+
+      <h3>Tops</h3>
+
+      <span>Explore →</span>
+
+    </button>
+
+
+    <button onclick="filterProducts('dresses')" class="category-card">
+
+      <div class="category-image">
+        <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=600&q=80">
+      </div>
+
+      <h3>Dresses</h3>
+
+      <span>Explore →</span>
+
+    </button>
+
+
+    <button onclick="filterProducts('western')" class="category-card">
+
+      <div class="category-image">
+        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=600&q=80">
+      </div>
+
+      <h3>Western Wear</h3>
+
+      <span>Explore →</span>
+
+    </button>
+
+
+    <button onclick="filterProducts('kurtis')" class="category-card">
+
+      <div class="category-image">
+        <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=600&q=80">
+      </div>
+
+      <h3>Kurtis</h3>
+
+      <span>Explore →</span>
+
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FEATURES
+===================================================== -->
+
+<section class="features">
+
+  <div class="feature">
+
+    <div>🚚</div>
+
+    <h3>Easy Delivery</h3>
+
+    <p>Fast doorstep delivery.</p>
+
+  </div>
+
+
+  <div class="feature">
+
+    <div>🔒</div>
+
+    <h3>Secure Shopping</h3>
+
+    <p>Safe and simple checkout.</p>
+
+  </div>
+
+
+  <div class="feature">
+
+    <div>↩</div>
+
+    <h3>Easy Returns</h3>
+
+    <p>Shop without hesitation.</p>
+
+  </div>
+
+
+  <div class="feature">
+
+    <div>💬</div>
+
+    <h3>WhatsApp Support</h3>
+
+    <p>We're here to help.</p>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     SHOP
+===================================================== -->
+
+<section id="shop" class="section shop-section">
+
+  <div class="section-heading">
+
+    <p class="eyebrow">
+      THE SHARRY EDIT
+    </p>
+
+    <h2>
+      Shop our favourites
+    </h2>
+
+    <p>
+      Find your next favourite look.
+    </p>
+
+  </div>
+
+
+  <div class="shop-toolbar">
+
+    <div class="filter-buttons">
+
+      <button onclick="filterProducts('all')">
+        All
+      </button>
+
+      <button onclick="filterProducts('tops')">
+        Tops
+      </button>
+
+      <button onclick="filterProducts('dresses')">
+        Dresses
+      </button>
+
+      <button onclick="filterProducts('western')">
+        Western
+      </button>
+
+      <button onclick="filterProducts('kurtis')">
+        Kurtis
+      </button>
+
+    </div>
+
+
+    <button onclick="openSearch()" class="search-products">
+      🔍 Search Products
+    </button>
+
+  </div>
+
+
+  <div id="productGrid" class="product-grid"></div>
+
+</section>
+
+
+<!-- =====================================================
+     OFFER / PARALLAX SECTION
+===================================================== -->
+
+<section class="offer-section">
+
+  <div class="offer-content">
+
+    <p class="eyebrow">
+      LIMITED TIME
+    </p>
+
+    <h2>
+      Your wardrobe
+      <br>
+      deserves a little love.
+    </h2>
+
+    <p>
+      Get 10% off your first Sharry Studio order.
+    </p>
+
+    <div class="countdown">
+
+      <div>
+        <strong id="days">00</strong>
+        <span>Days</span>
+      </div>
+
+      <div>
+        <strong id="hours">00</strong>
+        <span>Hours</span>
+      </div>
+
+      <div>
+        <strong id="minutes">00</strong>
+        <span>Minutes</span>
+      </div>
+
+      <div>
+        <strong id="seconds">00</strong>
+        <span>Seconds</span>
+      </div>
+
+    </div>
+
+    <a href="#shop" class="primary-btn">
+      Shop Now
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     NEW ARRIVALS
+===================================================== -->
+
+<section id="new" class="section">
+
+  <div class="split-section">
+
+    <div class="split-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=1000&q=85"
+        alt="New collection"
+      >
+
+    </div>
+
+
+    <div class="split-content">
+
+      <p class="eyebrow">
+        NEW ARRIVALS
+      </p>
+
+      <h2>
+        Fresh looks.
+        <br>
+        New energy.
+      </h2>
+
+      <p>
+        Discover our newest pieces designed to fit
+        effortlessly into your everyday wardrobe.
+      </p>
+
+      <a href="#shop" class="primary-btn">
+        Discover New Arrivals →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     TRENDING
+===================================================== -->
+
+<section id="trending" class="section trending-section">
+
+  <div class="section-heading">
+
+    <p class="eyebrow">
+      TRENDING NOW
+    </p>
+
+    <h2>
+      What's everyone loving?
+    </h2>
+
+  </div>
+
+
+  <div class="trending-grid">
+
+    <div class="trend-card large">
+
+      <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=900&q=85">
+
+      <div>
+
+        <span>01</span>
+
+        <h3>Soft & Feminine</h3>
+
+        <p>Romantic everyday styles.</p>
+
+      </div>
+
+    </div>
+
+
+    <div class="trend-card">
+
+      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=85">
+
+      <div>
+
+        <span>02</span>
+
+        <h3>Everyday Chic</h3>
+
+        <p>Easy looks that work anywhere.</p>
+
+      </div>
+
+    </div>
+
+
+    <div class="trend-card">
+
+      <img src="https://images.unsplash.com/photo-1495385794356-15371f348c31?auto=format&fit=crop&w=700&q=85">
+
+      <div>
+
+        <span>03</span>
+
+        <h3>Statement Pieces</h3>
+
+        <p>Stand out without trying too hard.</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about" class="section about-section">
+
+  <div class="about-card">
+
+    <div>
+
+      <p class="eyebrow">
+        ABOUT SHARRY STUDIO
+      </p>
+
+      <h2>
+        Fashion should feel
+        <span>like you.</span>
+      </h2>
+
+      <p>
+        Sharry Studio is built around one simple idea:
+        fashion should be expressive, comfortable and
+        easy to shop.
+      </p>
+
+      <p>
+        From everyday essentials to statement looks,
+        we're here to help you dress your story.
+      </p>
+
+      <a href="#shop" class="primary-btn">
+        Explore Sharry Studio
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     REVIEWS
+===================================================== -->
+
+<section class="section reviews-section">
+
+  <div class="section-heading">
+
+    <p class="eyebrow">
+      CUSTOMER LOVE
+    </p>
+
+    <h2>
+      What our customers say
+    </h2>
+
+  </div>
+
+
+  <div class="reviews">
+
+    <div class="review-card">
+
+      <div class="stars">
+        ★★★★★
+      </div>
+
+      <p>
+        "The website is so easy to use and the
+        collection is beautiful."
+      </p>
+
+      <strong>
+        — Sharry Customer
+      </strong>
+
+    </div>
+
+
+    <div class="review-card">
+
+      <div class="stars">
+        ★★★★★
+      </div>
+
+      <p>
+        "Loved the quality and the overall shopping
+        experience."
+      </p>
+
+      <strong>
+        — Sharry Customer
+      </strong>
+
+    </div>
+
+
+    <div class="review-card">
+
+      <div class="stars">
+        ★★★★★
+      </div>
+
+      <p>
+        "Finally a fashion store that feels premium
+        but is still easy to navigate."
+      </p>
+
+      <strong>
+        — Sharry Customer
+      </strong>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
+
+<section class="newsletter">
+
+  <div>
+
+    <p class="eyebrow">
+      JOIN THE SHARRY CLUB
+    </p>
+
+    <h2>
+      New drops.
+      <br>
+      First access.
+    </h2>
+
+    <p>
+      Be the first to know about new collections,
+      offers and exclusive launches.
+    </p>
+
+  </div>
+
+
+  <form onsubmit="subscribe(event)" class="newsletter-form">
+
+    <input
+      type="email"
+      id="email"
+      placeholder="Your email address"
+      required
+    >
+
+    <button>
+      Join Us →
+    </button>
+
+  </form>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+  <div class="footer-brand">
+
+    <div class="brand-3d">
+      Sharry
+    </div>
+
+    <span>STUDIO</span>
+
+    <p>
+      Dress your story.
+    </p>
+
+  </div>
+
+
+  <div>
+
+    <h4>Shop</h4>
+
+    <a href="#shop">All Products</a>
+    <a href="#new">New Arrivals</a>
+    <a href="#trending">Trending</a>
+
+  </div>
+
+
+  <div>
+
+    <h4>Help</h4>
+
+    <a href="#">Shipping</a>
+    <a href="#">Returns</a>
+    <a href="#">Size Guide</a>
+
+  </div>
+
+
+  <div>
+
+    <h4>Contact</h4>
+
+    <a href="https://wa.me/91XXXXXXXXXX" target="_blank">
+      WhatsApp
+    </a>
+
+    <a href="mailto:hello@sharrystudio.com">
+      Email
+    </a>
+
+    <a href="#">
+      Instagram
+    </a>
+
+  </div>
+
+</footer>
+
+
+<div class="copyright">
+
+  © 2026 Sharry Studio. All rights reserved.
+
+</div>
+
+
+<!-- =====================================================
+     SEARCH OVERLAY
+===================================================== -->
+
+<div id="searchOverlay" class="overlay">
+
+  <div class="search-box">
+
+    <button onclick="closeSearch()" class="close">
+      ×
+    </button>
+
+    <p class="eyebrow">
+      SEARCH SHARRY STUDIO
+    </p>
+
+    <h2>
+      What are you looking for?
+    </h2>
+
+    <input
+      id="searchInput"
+      oninput="searchProducts()"
+      placeholder="Search tops, dresses, kurtis..."
+    >
+
+    <div id="searchResults"></div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     CART
+===================================================== -->
+
+<div id="cartOverlay" class="overlay">
+
+  <div class="cart-panel">
+
+    <div class="cart-header">
+
+      <h2>
+        Your Bag
+      </h2>
+
+      <button onclick="closeCart()" class="close">
+        ×
+      </button>
+
+    </div>
+
+
+    <div id="cartItems"></div>
+
+
+    <div class="cart-bottom">
+
+      <div class="cart-total">
+
+        <span>Total</span>
+
+        <strong id="cartTotal">
+          ₹0
+        </strong>
+
+      </div>
+
+      <button onclick="checkout()" class="primary-btn full">
+        Checkout →
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     QUICK VIEW
+===================================================== -->
+
+<div id="quickView" class="overlay">
+
+  <div class="quick-view">
+
+    <button onclick="closeQuickView()" class="close">
+      ×
+    </button>
+
+    <div id="quickContent"></div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div id="toast" class="toast">
+  Added to your bag ✓
+</div>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+  class="whatsapp"
+  href="https://wa.me/91XXXXXXXXXX"
+  target="_blank"
+>
+  💬
+</a>
+
+
+<!-- BACK TO TOP -->
+
+<button id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  ↑
+</button>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
